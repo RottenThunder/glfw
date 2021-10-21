@@ -3,8 +3,8 @@ project "GLFW"
 	language "C"
 	staticruntime "off"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("../../bin/%{cfg.buildcfg}-x64/%{prj.name}")
+	objdir ("../../bin-int/%{cfg.buildcfg}-x64/%{prj.name}")
 
 	files
 	{
@@ -18,6 +18,7 @@ project "GLFW"
 		"src/vulkan.c",
 		"src/window.c"
 	}
+
 	filter "system:linux"
 		pic "On"
 
